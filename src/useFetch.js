@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useFetch = ("https://json-test-mu.vercel.app/blogs") => {
+const useFetch = (https://json-test-mu.vercel.app/blogs) => {
 
     const [data, setData] = useState(null);
     const [isPending, setIsPending] = useState(true);
@@ -26,7 +26,7 @@ const useFetch = ("https://json-test-mu.vercel.app/blogs") => {
             setError(err.message);
         })
         },500);
-    },["https://json-test-mu.vercel.app/blogs"]);
+    },[https://json-test-mu.vercel.app/blogs]);
 
     return {data, isPending, error}
 }
