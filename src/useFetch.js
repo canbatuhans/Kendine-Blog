@@ -9,7 +9,7 @@ const useFetch = (https://json-test-mu.vercel.app/blogs) => {
     
     useEffect(() => {
         setTimeout(() => {
-            fetch("https://json-test-mu.vercel.app/blogs")
+            fetch(https://json-test-mu.vercel.app/blogs)
         .then(res => {
             if (!res.ok) {
                 throw Error("could not fetch the data for that resource")
