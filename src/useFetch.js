@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (url) => {
+const useFetch = ("https://json-test-mu.vercel.app/blogs") => {
 
     const [data, setData] = useState(null);
     const [isPending, setIsPending] = useState(true);
@@ -9,7 +9,7 @@ const useFetch = (url) => {
     
     useEffect(() => {
         setTimeout(() => {
-            fetch(url)
+            fetch("https://json-test-mu.vercel.app/blogs")
         .then(res => {
             if (!res.ok) {
                 throw Error("could not fetch the data for that resource")
@@ -26,7 +26,7 @@ const useFetch = (url) => {
             setError(err.message);
         })
         },500);
-    },[url]);
+    },["https://json-test-mu.vercel.app/blogs"]);
 
     return {data, isPending, error}
 }
