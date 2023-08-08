@@ -9,7 +9,7 @@ const BlogDetails = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        fetch("http://localhost:8000/blogs/" + blog.id, {
+        fetch("https://json-test-mu.vercel.app/blogs" + blog.id, {
             method: "DELETE"
         }).then(() => {
             navigate("/")
