@@ -5,7 +5,7 @@ import { useNavigate} from "react-router-dom";
 const BlogDetails = () => {
 
     const {id} = useParams();
-    const {data: blog, error, isPending} = useFetch("http://localhost:8000/blogs/" + id)
+    const {data: blog, error, isPending} = useFetch("https://json-test-mu.vercel.app/blogs" + id)
     const navigate = useNavigate();
 
     const handleClick = () => {
